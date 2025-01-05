@@ -1,5 +1,20 @@
 import math
 
+# Noktaların Tanımlanması
+points = [(1, 2), (4, 6), (7, 8), (2, 3), (5, 1)]
+
+# Mesafeleri hesaplayıp minimum olanı bulma
+min_distance = min(
+    math.dist(points[i], points[j]) 
+    for i in range(len(points)) 
+    for j in range(i + 1, len(points))
+)
+
+print(f"Minimum mesafe: {min_distance:.2f}")
+
+"""
+import math
+
 # 1. Noktaların Tanımlanması (2D uzaydaki noktalar)
 points = [(1, 2), (4, 6), (7, 8), (2, 3), (5, 1)]
 
@@ -22,3 +37,4 @@ min_distance = min(distances)
 
 # Minimum mesafeyi yazdırma
 print("Minimum mesafe:", min_distance)
+"""
